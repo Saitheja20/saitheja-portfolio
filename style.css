@@ -1,4 +1,6 @@
-
+/* *{
+    background-color: rgb(75, 82, 79);
+} */
 .red{
     color: red;
     border-bottom: 5px double white;
@@ -49,33 +51,77 @@ section {
     color: red;
     display: inline-flex;
 }
-.hidden{
+/* .hidden{
     display: block;
-}
+} */
 /* #AboutMe{
     padding: 0%;
 
 } */
 
-.btn{
-    margin-top: 30px;
+ .btn{
+     margin-top: 30px;
     display: inline-block;
-    /* text-align: center; */
-    /* display: inline-block; */
+    background-color: black;
+    color: white;  
 }
-.btns:hover{
-    background: linear-gradient(to left, rgb(36, 234, 227) 70%, rgb(13,110,253) 30%);
-        background-size: 200% 100%;
-        background-position: right bottom;
-        transition: all .9s ease-out;
-        border: 1px double green;
+.btn:hover{
 
+     background: linear-gradient(to left, rgb(36, 234, 227) 70%, rgb(13,110,253) 30%);
+        background-size: 200% 100%;
+        background-position: left bottom;
+        transition: all .7s ease-out;
+        border: 1px double green; 
+        background: linear-gradient(to right, rgb(36, 234, 227) 50%, rgb(13, 110, 253) 50%);
+background-size: 200% 100%;
+background-position: left bottom;
+transition: all .1s ease-out;
+border: 1px double green;
+       
+} 
+
+.cerimg{
+    display: block;
+    border: 5px dotted black;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    margin-top: 10%;
+
+}
+.cerimg:hover{
+    display: inline-block;
+    opacity: 100%;
+    transform: scale(1.45);
+}
+ @keyframes leftToRight {
+    0% {
+      background-position: left bottom;
+    }
+    100% {
+      background-position: right bottom;
+    }
+  }
+  
+  /* Apply the animation to the element */
+  .button {
+    background: linear-gradient(to right, rgb(13, 110, 253) 50%, rgb(36, 234, 227) 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    animation: leftToRight 2s ease-out forwards; /* 2s duration with ease-out timing function */
+    border: 1px double green;
+
+    animation-name: leftToRightAnimation;
+    animation-duration: 2s; /* 2 seconds duration */
+    animation-timing-function: ease-out; /* Ease out the animation */
+    animation-delay: 1s; /* 1-second delay before the animation starts */
+    animation-fill-mode: forwards; /* Retain the final state of the animation */
+  
+  } 
+
+.center1{
+    text-align: center;
     
 }
-/* .center{
-    text-align: center;
-    flex: left;
-} */
 .inline{
     display: inline-block;
     
@@ -94,6 +140,17 @@ section {
 .navbar-brand{
     text-transform: uppercase;
 }
+
+/* carousel btn color */
+/* .carousel-control-prev-icon, .carousel-control-next-icon {
+    
+    /* outline: black; */
+    /* background-color: rgba(0, 0, 0, 0.3);
+    background-size: 100%, 100%;
+    border-radius: 50%; 
+    color: black;
+    border: 1px solid black;
+} */
 /* |||||||||||||||||||||||for mobile view|||||||||||||||||||||||| */
 @media(min-width: 380px) and (max-width:964px){
     /* heading and photo content starts */
@@ -109,7 +166,9 @@ section {
       
         color: white;
     }
-
+.center{
+    text-align: center;
+}
     .navbar-brand:hover{
         
         /* color: rgb(0, 234, 255); */
@@ -218,7 +277,7 @@ section {
         padding: 0 20px 0 20px;
     }
     .nav-item:hover{
-        /* text-transform: uppercase; */
+        text-transform: uppercase;
         background-color: rgb(114, 233, 233);
         text-decoration: none;
     }
@@ -238,5 +297,8 @@ section {
         display: inline-block;
         border-radius: 50%;
         text-align: center;
+    }
+    .navbar{
+        position: relative;
     }
 }
